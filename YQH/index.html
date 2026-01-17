@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- 微信适配关键meta标签 -->
+    <meta name="wechat-webview-detect" content="1">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <title>XX公司202X年度盛典邀请函</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入礼花依赖 -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <!-- 1. 背景音乐控件 -->
+    <audio id="bgm" loop preload="auto">
+        <source src="assets/music/bgm.mp3" type="audio/mpeg">
+        你的浏览器不支持音频播放
+     </audio>
+    <button id="musicToggle" class="music-btn">🎵 播放背景音乐</button>
+
+    <!-- 2. 年会倒计时区域 -->
+    <div class="countdown-container" id="countdown">
+        <h2>年度盛典倒计时</h2>
+        <div class="countdown-box">
+            <span id="days">00</span>
+            <span class="time-label">天</span>
+            <span id="hours">00</span>
+            <span class="time-label">时</span>
+            <span id="minutes">00</span>
+            <span class="time-label">分</span>
+            <span id="seconds">00</span>
+            <span class="time-label">秒</span>
+        </div>
+    </div>
+
+    <!-- 3. 丰富字体层次的邀请词区域（带渐显动画） -->
+    <div class="invitation-content">
+        <p class="invitation-title">岁聿其莫，华章日新</p>
+        <p class="invitation-subtitle">丙午马年，万象启荣</p>
+        <p class="invitation-paragraph">
+            回望一年耕耘路，感恩每一位同行者的并肩奋进、聚力担当。
+        </p>
+        <p class="invitation-paragraph">
+            值此辞旧迎新、策马逐梦之际，我们诚挚邀请您莅临XX公司202X年度盛典，
+        </p>
+        <p class="invitation-highlight">
+            共赏岁末荣光，共话未来新程，一同奔赴属于我们的璀璨新岁！
+        </p>
+    </div>
+
+    <!-- 4. 照片轮播区域（自适应不变形） -->
+    <div class="photo-container">
+        <h2>精彩回顾 · 敬请期待</h2>
+        <div class="photo-slider" id="photoSlider">
+            <img src="assets/images/photo1.jpg" alt="年会精彩照片1" class="photo-item active">
+            <img src="assets/images/photo2.jpg" alt="年会精彩照片2" class="photo-item">
+            <img src="assets/images/photo3.jpg" alt="年会精彩照片3" class="photo-item">
+        </div>
+        <div class="photo-dots" id="photoDots"></div>
+    </div>
+
+    <!-- 5. 地图地址导航区域 -->
+    <div class="map-container">
+        <h2>盛典详情 · 导航指引</h2>
+        <div class="map-info">
+            <p class="map-detail">📍 详细地址：XX市XX区XX路XX号XX大厦XX楼 XX宴会厅</p>
+            <p class="map-detail">📅 举办时间：202X年X月X日 下午14:30（签到）- 18:00（晚宴）</p>
+            <p class="map-detail">📞 联系咨询：XXX-XXXX-XXXX（行政部）</p>
+            <button class="nav-btn" onclick="copyAddress()">复制地址（微信内粘贴导航）</button>
+            <img src="assets/icons/location.png" alt="年会场地地图定位" class="map-img">
+        </div>
+    </div>
+
+    <!-- 6. 底部邀请函落款（强化视觉） -->
+    <div class="invitation-footer">
+        <h1>XX公司 敬邀</h1>
+        <p class="footer-slogan">携手同行 · 共赴新程</p>
+        <p class="footer-date">202X年X月</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
